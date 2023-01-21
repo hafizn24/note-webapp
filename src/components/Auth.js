@@ -9,6 +9,8 @@ function Auth() {
     async function signInWithGitHub(){
         const { data, error } = await supabase.auth.signInWithOAuth({
             provider: 'github',
+        },{
+            redirectTo: 'https://hafiz-note.netlify.app/'
         })
     }
 
